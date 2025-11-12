@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreadTrove - Fashion Finds Galore!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/product-card.js"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="hero bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white mb-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Your Perfect Style</h1>
+                <p class="text-xl mb-6">Trendy outfits for every occasion at unbeatable prices</p>
+                <a href="#products" class="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="category-card bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition duration-300 text-center">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                        <i data-feather="tshirt" class="w-8 h-8 mx-auto text-pink-500"></i>
+                    </div>
+                    <h3 class="font-medium">T-Shirts</h3>
+                </a>
+                <a href="#" class="category-card bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition duration-300 text-center">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                        <i data-feather="shirt" class="w-8 h-8 mx-auto text-purple-500"></i>
+                    </div>
+                    <h3 class="font-medium">Shirts</h3>
+                </a>
+                <a href="#" class="category-card bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition duration-300 text-center">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                        <i data-feather="trending-up" class="w-8 h-8 mx-auto text-blue-500"></i>
+                    </div>
+                    <h3 class="font-medium">Jeans</h3>
+                </a>
+                <a href="#" class="category-card bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition duration-300 text-center">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                        <i data-feather="watch" class="w-8 h-8 mx-auto text-green-500"></i>
+                    </div>
+                    <h3 class="font-medium">Accessories</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="products" class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Featured Products</h2>
+                <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">View All</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <custom-product-card 
+                    image="http://static.photos/fashion/640x360/1" 
+                    title="Summer Floral Dress" 
+                    price="29.99" 
+                    old-price="49.99"
+                    rating="4.5">
+                </custom-product-card>
+                <custom-product-card 
+                    image="http://static.photos/fashion/640x360/2" 
+                    title="Classic White Tee" 
+                    price="14.99" 
+                    old-price="24.99"
+                    rating="4.2">
+                </custom-product-card>
+                <custom-product-card 
+                    image="http://static.photos/fashion/640x360/3" 
+                    title="Slim Fit Jeans" 
+                    price="39.99" 
+                    old-price="59.99"
+                    rating="4.7">
+                </custom-product-card>
+                <custom-product-card 
+                    image="http://static.photos/fashion/640x360/4" 
+                    title="Denim Jacket" 
+                    price="45.99" 
+                    old-price="65.99"
+                    rating="4.8">
+                </custom-product-card>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm mb-12">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-2">Stay Updated</h2>
+                <p class="text-gray-600 mb-6">Subscribe to our newsletter for exclusive deals and fashion tips</p>
+                <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded-full font-medium hover:bg-pink-700 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
